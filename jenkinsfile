@@ -1,22 +1,28 @@
-// pipeline {
-//     agent any
+ pipeline {
+     agent any
 
-//     stages {
-//         stage('clone') {
-//             steps {
-//               git branch: 'main', url: 'https://github.com/RakeshKanzariya2218/Terraform-Jenkins-CICD.git'
-//             }
-//         }
-//         stage('init') {
-//             steps {
-//                 sh 'terraform init'
-//             }
-//         }
-//          stage('plan') {
-//             steps {
-//                 sh 'terraform plan'
-//             }
-//         }
-//     }
-// }
+     stages {
+         stage('clone') {
+             steps {
+              git branch: 'main', url: 'https://github.com/RakeshKanzariya2218/Terraform-Jenkins-CICD.git'
+             }
+         }
+         stage('init') {
+             steps {
+                 sh 'terraform init'
+            }
+        }
+          stage('plan') {
+             steps {
+                 sh 'terraform plan'
+             }
+         }
+         stage('apply') {
+             steps {
+                 sh "terraform ${action} -auto-approve"
+             }
+         }
+     }
+ }
+
 
