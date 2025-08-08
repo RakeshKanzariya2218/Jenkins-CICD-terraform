@@ -22,11 +22,12 @@
 //          }
 //          stage('apply') {
 //              steps {
-//                  sh "terraform ${action} -auto-approve"
+//                  sh "terraform ${action} -auto-approve"             # inside this action is for perameter setting the action ( apply , destroy ) like that ans pipeline  build with perameter
 //              }
 //          }
 //      }
 //  }
+
 
 
 
