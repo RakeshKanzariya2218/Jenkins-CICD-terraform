@@ -2,7 +2,7 @@ provider "aws" {
 }
 
 
-resource "aws_instance" "name" {
+resource "aws_instance" "ec2" {
   ami = "ami-0150ccaf51ab55a51"
   instance_type = "t3.medium"
   key_name = "key-1"
