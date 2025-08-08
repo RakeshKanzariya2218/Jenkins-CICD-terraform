@@ -1,3 +1,6 @@
+## this file is for pipeline script call from github and run inside jenkins by scm scripting method ##
+
+
 //  pipeline {
 //      agent any
 
@@ -24,5 +27,9 @@
 //          }
 //      }
 //  }
+
+
+
+
 
 
